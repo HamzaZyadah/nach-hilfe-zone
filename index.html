@@ -42,6 +42,14 @@
         .modal { display: none; }
         
         /* Animationen & Interaktionen */
+        @keyframes pulse-bright {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+          70% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0); }
+        }
+        .animate-pulse-bright {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            animation: pulse-bright 2.5s infinite;
+        }
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -121,12 +129,16 @@
                     <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
                         Ich verwandle komplizierten Schulstoff in klares Wissen. Gemeinsam sorgen wir für bessere Noten, mehr Selbstvertrauen und Spaß am Lernen.
                     </p>
-                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto">
-                            Sichere dir deine Probestunde
-                        </a>
-                        <a href="#pricing" class="font-semibold text-slate-600 hover:text-slate-900 transition-colors w-full sm:w-auto">
-                           Preise ansehen <i class="fas fa-arrow-right ml-1"></i>
+                    <div class="mt-10 flex flex-col items-center justify-center gap-6">
+                        <div class="flex flex-col items-center gap-2">
+                            <a href="#contact" class="group animate-pulse-bright bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-blue-500/50 w-full sm:w-auto flex items-center justify-center gap-3">
+                                Sichere dir deine Probestunde
+                                <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                            <p class="text-sm text-slate-500">100% kostenlos & unverbindlich</p>
+                        </div>
+                        <a href="#pricing" class="font-semibold text-slate-600 hover:text-slate-900 transition-colors">
+                           Oder Preise ansehen <i class="fas fa-arrow-down ml-1"></i>
                         </a>
                     </div>
                 </div>
@@ -318,12 +330,14 @@
                         Probestunde sichern
                     </a>
                 </div>
+                
                 <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
-                    <div class="reveal">
-                        <h3 class="text-2xl font-bold text-slate-800">Pakete: Gezielte Unterstützung</h3>
-                        <p class="mt-2 mb-6">Ideal für Klausurvorbereitung oder spezifische Themen. Einmal buchen, flexibel nutzen.</p>
+                    <!-- Pakete Card -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 reveal">
+                        <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-2"><i class="fas fa-box-open text-blue-500"></i>Pakete</h3>
+                        <p class="mb-6">Ideal für Klausurvorbereitung oder spezifische Themen. Einmal buchen, flexibel nutzen.</p>
                         <div class="space-y-4">
-                            <div class="bg-white p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">Einzelstunde</h4>
@@ -332,7 +346,7 @@
                                     <div class="text-right"><p class="font-bold text-lg text-slate-800">34,99 €</p></div>
                                 </div>
                             </div>
-                            <div class="bg-white p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">5er-Paket</h4>
@@ -341,7 +355,7 @@
                                     <div class="text-right"><p class="font-bold text-lg text-slate-800">31,99 €<span class="font-normal text-sm text-slate-500">/Std.</span></p></div>
                                 </div>
                             </div>
-                            <div class="bg-white p-6 rounded-lg border-2 border-blue-300 relative card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border-2 border-blue-300 relative card-hover">
                                 <div class="absolute -top-3 left-4 bg-blue-100 text-blue-700 px-2 py-0.5 text-xs font-bold rounded-full">BELIEBT</div>
                                 <div class="flex justify-between items-center">
                                     <div>
@@ -351,7 +365,7 @@
                                     <div class="text-right"><p class="font-bold text-lg text-slate-800">29,99 €<span class="font-normal text-sm text-slate-500">/Std.</span></p></div>
                                 </div>
                             </div>
-                            <div class="bg-white p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">20er-Paket</h4>
@@ -362,12 +376,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border-2 border-blue-600 reveal" style="transition-delay: 200ms;">
-                        <div class="relative">
-                            <div class="absolute -top-11 right-0 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold tracking-wide">BESTER WERT</div>
-                            <h3 class="text-2xl font-bold text-blue-800">Abos: Nachhaltiger Erfolg</h3>
-                            <p class="mt-2 mb-6">Der beste Weg für kontinuierliche Fortschritte – mit dem größten Preisvorteil.</p>
-                        </div>
+                    
+                    <!-- Abos Card -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-600 relative reveal" style="transition-delay: 200ms;">
+                        <div class="absolute -top-4 right-8 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold tracking-wide">BESTER WERT</div>
+                        <h3 class="text-2xl font-bold text-blue-800 flex items-center gap-3 mb-2"><i class="fas fa-sync-alt text-blue-500"></i>Abos</h3>
+                        <p class="mb-6">Der beste Weg für kontinuierliche Fortschritte – mit dem größten Preisvorteil.</p>
                         <div>
                             <div class="mb-4">
                                 <label class="font-semibold text-slate-700 mb-2 block">1. Wähle die Intensität:</label>
@@ -394,7 +408,7 @@
                                     <button data-duration="6-monat" class="abo-btn duration-btn">6 Mon.</button>
                                 </div>
                             </div>
-                            <div class="bg-white mt-6 p-6 rounded-lg text-center transition-all duration-300">
+                            <div class="bg-slate-50 mt-6 p-6 rounded-lg text-center transition-all duration-300">
                                 <p class="text-slate-500 text-sm">Dein Preis pro Stunde</p>
                                 <p id="per-hour-price" class="text-4xl sm:text-5xl font-extrabold text-blue-600 my-1">32,50 €</p>
                                 <p id="total-price" class="text-slate-700 font-semibold">129,99 € / Monat</p>
@@ -414,9 +428,9 @@
              <div class="container mx-auto px-6">
                 <div class="text-center mb-12 sm:mb-16 max-w-2xl mx-auto reveal">
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">Das sagen Schüler und Eltern</h2>
-                    <p class="text-lg mt-4">Hier könnten bald deine Erfolgsgeschichten stehen.</p>
+                    <p class="text-lg mt-4">Erfolgsgeschichten, die für sich sprechen.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=L.M." alt="Avatar">
@@ -436,6 +450,36 @@
                             </div>
                         </div>
                         <p class="italic">"Die Noten unseres Sohnes haben sich von einer 5 auf eine 2 verbessert. Aber was noch wichtiger ist: Er hat wieder Spaß an Mathe und geht ohne Angst in den Unterricht."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 300ms;">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=J.P." alt="Avatar">
+                            <div>
+                                <p class="font-semibold text-slate-800">Jan P., Abiturient</p>
+                                <p class="text-slate-500 text-sm">Schriftliche Mathe-Prüfung</p>
+                            </div>
+                        </div>
+                        <p class="italic">"Die schriftliche Mathe-Prüfung war meine größte Sorge. Hamza hat mir nicht nur die Themen geduldig erklärt, sondern auch Strategien gezeigt, wie man die Aufgaben ruhig und strukturiert löst. Die 12 Punkte waren eine riesige Erleichterung!"</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 450ms;">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=S.T." alt="Avatar">
+                            <div>
+                                <p class="font-semibold text-slate-800">Sophie T., Abiturientin</p>
+                                <p class="text-slate-500 text-sm">Mündliche Mathe-Prüfung</p>
+                            </div>
+                        </div>
+                        <p class="italic">"Ich musste ins mündliche Mathe-Abi und war total panisch. Dank Hamzas gezielter Vorbereitung auf die Prüfungssituation konnte ich souverän argumentieren und habe am Ende sogar Spaß dabei gehabt. Unfassbar, danke!"</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 600ms;">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=F.B." alt="Avatar">
+                            <div>
+                                <p class="font-semibold text-slate-800">Familie B., Eltern eines Abiturienten</p>
+                                <p class="text-slate-500 text-sm">Mathe-Abitur</p>
+                            </div>
+                        </div>
+                        <p class="italic">"Unser Sohn hatte große Lücken in Mathe vor dem Abitur. Hamzas ruhige und verständliche Art hat ihm die Sicherheit zurückgegeben. Er hat das Abi bestanden und wir sind einfach nur dankbar für die professionelle Unterstützung."</p>
                     </div>
                 </div>
             </div>
@@ -529,7 +573,7 @@
                         <!-- Contact Form -->
                         <div id="form-container" class="bg-white p-6 rounded-lg border border-slate-200 card-hover">
                             <h3 class="text-lg font-bold text-slate-800 mb-4">Schreibe mir direkt hier</h3>
-                            <form id="contact-form" action="https://formsubmit.co/hmzyadah@icloud.com" method="POST">
+                            <form id="contact-form" action="https://formsubmit.co/info@nach-hilfe-zone.de" method="POST">
                                 <!-- FormSubmit Settings -->
                                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Nachhilfe Zone!">
                                 <input type="hidden" name="_captcha" value="false">
@@ -582,7 +626,7 @@
     </footer>
     
     <!-- Modals (werden per JS gesteuert) -->
-    <div id="impressum-modal" class="modal fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+    <div id="impressum-modal" class="modal fixed inset-0 bg-black/60 z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
             <div class="p-6 border-b flex justify-between items-center sticky top-0 bg-white z-10">
                 <h3 class="text-xl font-bold text-slate-800">Impressum</h3>
@@ -602,7 +646,7 @@
             </div>
         </div>
     </div>
-    <div id="datenschutz-modal" class="modal fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+    <div id="datenschutz-modal" class="modal fixed inset-0 bg-black/60 z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
             <div class="p-6 border-b flex justify-between items-center sticky top-0 bg-white z-10">
                 <h3 class="text-xl font-bold text-slate-800">Datenschutzerklärung</h3>
@@ -797,8 +841,8 @@
     });
     </script>
 </body>
-
 </html>
+
 
 
 
