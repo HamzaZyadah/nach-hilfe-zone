@@ -74,16 +74,15 @@
     <header id="main-header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
         <div class="container mx-auto px-6">
             <div class="flex items-center justify-between h-20">
-                <a href="#home" class="flex items-center text-2xl font-bold text-slate-800">
-                    <svg class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#home" class="flex items-center gap-3 text-2xl font-bold text-slate-800">
+                    <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#3b82f6" />
                                 <stop offset="100%" stop-color="#60a5fa" />
                             </linearGradient>
                         </defs>
-                        <rect width="24" height="24" rx="6" fill="url(#logoGradient)"/>
-                        <path d="M7 12.5L10.5 16L17 9.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 18L9 6H15L20 18H15L13.5 14H10.5L9 18H4Z" fill="url(#logoGradient)"/>
                     </svg>
                     <span>
                         <span class="text-blue-600">Nachhilfe</span> Zone
@@ -433,26 +432,6 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover">
                         <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=L.M." alt="Avatar">
-                            <div>
-                                <p class="font-semibold text-slate-800">Lina M., 11. Klasse</p>
-                                <p class="text-slate-500 text-sm">Abiturvorbereitung Biologie</p>
-                            </div>
-                        </div>
-                        <p class="italic">"Ich habe in den paar Wochen mit Hamza mehr verstanden als im ganzen letzten Halbjahr. Die Abi-Prüfung war danach kein Problem mehr. Danke!"</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 150ms;">
-                         <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=S.K." alt="Avatar">
-                            <div>
-                                <p class="font-semibold text-slate-800">Frau K., Mutter eines 8.-Klässlers</p>
-                                <p class="text-slate-500 text-sm">Nachhilfe Mathematik</p>
-                            </div>
-                        </div>
-                        <p class="italic">"Die Noten unseres Sohnes haben sich von einer 5 auf eine 2 verbessert. Aber was noch wichtiger ist: Er hat wieder Spaß an Mathe und geht ohne Angst in den Unterricht."</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 300ms;">
-                        <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=J.P." alt="Avatar">
                             <div>
                                 <p class="font-semibold text-slate-800">Jan P., Abiturient</p>
@@ -461,8 +440,8 @@
                         </div>
                         <p class="italic">"Die schriftliche Mathe-Prüfung war meine größte Sorge. Hamza hat mir nicht nur die Themen geduldig erklärt, sondern auch Strategien gezeigt, wie man die Aufgaben ruhig und strukturiert löst. Die 12 Punkte waren eine riesige Erleichterung!"</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 450ms;">
-                        <div class="flex items-center mb-4">
+                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 150ms;">
+                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=S.T." alt="Avatar">
                             <div>
                                 <p class="font-semibold text-slate-800">Sophie T., Abiturientin</p>
@@ -471,7 +450,7 @@
                         </div>
                         <p class="italic">"Ich musste ins mündliche Mathe-Abi und war total panisch. Dank Hamzas gezielter Vorbereitung auf die Prüfungssituation konnte ich souverän argumentieren und habe am Ende sogar Spaß dabei gehabt. Unfassbar, danke!"</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 600ms;">
+                    <div class="bg-white p-8 rounded-xl border border-slate-200 reveal card-hover" style="transition-delay: 300ms;">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/e2e8f0/475569?text=F.B." alt="Avatar">
                             <div>
@@ -548,7 +527,7 @@
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto items-start">
                     <div class="space-y-6 reveal">
                         <!-- WICHTIG: Ersetzen Sie DEINE_HANDYNUMMER_OHNE_PLUS_ODER_NULL durch Ihre echte Handynummer (z.B. 491761234567) -->
-                        <a href="https://wa.me/491608374405" target="_blank" class="w-full flex items-center gap-4 bg-white p-6 rounded-lg font-semibold border border-slate-200 card-hover">
+                        <a href="https://wa.me/DEINE_HANDYNUMMER_OHNE_PLUS_ODER_NULL" target="_blank" class="w-full flex items-center gap-4 bg-white p-6 rounded-lg font-semibold border border-slate-200 card-hover">
                             <i class="fab fa-whatsapp fa-2x text-green-500"></i>
                             <div>
                                 <span class="text-slate-800">Chat via WhatsApp</span>
@@ -573,8 +552,10 @@
                         <!-- Contact Form -->
                         <div id="form-container" class="bg-white p-6 rounded-lg border border-slate-200 card-hover">
                             <h3 class="text-lg font-bold text-slate-800 mb-4">Schreibe mir direkt hier</h3>
-                            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                                <input type="hidden" name="access_key" value="4814ff5b-e058-41c6-9df4-ba2a7c5f3bc7">
+                            <form id="contact-form" action="https://formsubmit.co/info@nach-hilfe-zone.de" method="POST">
+                                <!-- FormSubmit Settings -->
+                                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Nachhilfe Zone!">
+                                <input type="hidden" name="_captcha" value="false">
                                 
                                 <div class="mb-4">
                                     <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Dein Name</label>
@@ -588,13 +569,16 @@
                                     <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Deine Nachricht</label>
                                     <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
                                 </div>
-                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                                 <div>
                                     <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-sm">Nachricht senden</button>
                                 </div>
                             </form>
+                            <div id="form-success-message" class="hidden text-center py-10">
+                                <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                                <h3 class="text-xl font-bold text-slate-800">Vielen Dank!</h3>
+                                <p class="text-slate-600">Deine Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei dir.</p>
+                            </div>
                         </div>
-                        
                     </div>
                     <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm reveal card-hover" style="transition-delay: 200ms;">
                         <div class="flex items-center gap-4 mb-4">
@@ -606,7 +590,7 @@
                         </div>
                         <!-- Calendly inline widget begin -->
                         <div class="calendly-inline-widget" data-url="https://calendly.com/hazahziadeh149/30min" style="min-width:320px;height:700px;"></div>
-                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                         <!-- Calendly inline widget end -->
                     </div>
                 </div>
@@ -677,7 +661,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // observer.unobserve(entry.target); // Keep observing for re-animation if needed
                 }
             });
         }, { threshold: 0.1 });
@@ -839,18 +822,51 @@
             .abo-btn:hover { background-color: #f1f5f9; border-color: #cbd5e1; }
             .abo-btn.active-btn { background-color: var(--brand-blue); color: #ffffff; border-color: var(--brand-blue); box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }`;
         document.head.appendChild(style);
+
+        // --- FormSubmit AJAX Submission ---
+        const contactForm = select('#contact-form');
+        const formContainer = select('#form-container');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.innerHTML = "Sende...";
+                submitButton.disabled = true;
+
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        contactForm.style.display = 'none';
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'text-center py-10';
+                        successMessage.innerHTML = `
+                            <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Vielen Dank!</h3>
+                            <p class="text-slate-600">Deine Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei dir.</p>
+                        `;
+                        formContainer.appendChild(successMessage);
+                    } else {
+                        console.error('Form submission error:', data);
+                        submitButton.innerHTML = "Fehler - erneut versuchen";
+                        submitButton.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Network error:', error);
+                    submitButton.innerHTML = "Fehler - erneut versuchen";
+                    submitButton.disabled = false;
+                });
+            });
+        }
     });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
