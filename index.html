@@ -114,9 +114,9 @@
         </div>
     </header>
 
-    <main>
+    <main class="pt-20">
         <!-- Home / Hero Section -->
-        <section id="home" class="hero-gradient pt-40 pb-24 overflow-hidden">
+        <section id="home" class="hero-gradient pt-20 pb-24 overflow-hidden">
             <div class="container mx-auto px-6 text-center relative">
                  <div class="absolute -top-20 -left-20 w-72 h-72 bg-blue-100 rounded-full opacity-30 blur-3xl animate-pulse"></div>
                  <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-green-100 rounded-full opacity-30 blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
@@ -139,6 +139,50 @@
                         <a href="#pricing" class="font-semibold text-slate-600 hover:text-slate-900 transition-colors">
                            Oder Preise ansehen <i class="fas fa-arrow-down ml-1"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Limited Time Offer Section -->
+        <section class="bg-slate-900 text-white py-16 sm:py-20 overflow-hidden">
+            <div class="container mx-auto px-6 relative">
+                <div class="absolute -top-24 -left-24 w-72 h-72 bg-blue-600/30 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+                <div class="relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="reveal text-center md:text-left">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                            <span class="block text-blue-400">Exklusives Herbst-Angebot</span>
+                            Ihr Start in den Erfolg!
+                        </h2>
+                        <p class="mt-4 text-lg text-slate-300 max-w-lg mx-auto md:mx-0">
+                            Sichern Sie sich jetzt <span class="font-bold text-white">15% Rabatt</span> auf alle Pakete & Abos und machen Sie dieses Schuljahr zu Ihrem besten. Nur für kurze Zeit!
+                        </p>
+                        <a href="#pricing" class="group mt-8 inline-flex items-center justify-center bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-blue-500/40">
+                            Angebot ansehen & sparen
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                    <div class="reveal" style="transition-delay: 150ms;">
+                        <p class="text-center text-sm text-slate-400 font-medium uppercase mb-3">Angebot endet in:</p>
+                        <div id="countdown" class="flex justify-center gap-2 sm:gap-4 text-center">
+                            <div class="bg-slate-800/50 p-4 rounded-lg min-w-[70px] sm:min-w-[90px]">
+                                <span id="days" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                                <span class="block text-xs font-normal opacity-75 mt-1">Tage</span>
+                            </div>
+                            <div class="bg-slate-800/50 p-4 rounded-lg min-w-[70px] sm:min-w-[90px]">
+                                <span id="hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                                <span class="block text-xs font-normal opacity-75 mt-1">Stunden</span>
+                            </div>
+                            <div class="bg-slate-800/50 p-4 rounded-lg min-w-[70px] sm:min-w-[90px]">
+                                <span id="minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                                <span class="block text-xs font-normal opacity-75 mt-1">Minuten</span>
+                            </div>
+                            <div class="bg-slate-800/50 p-4 rounded-lg min-w-[70px] sm:min-w-[90px]">
+                                <span id="seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                                <span class="block text-xs font-normal opacity-75 mt-1">Sekunden</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -301,12 +345,12 @@
                     </div>
                     <div class="bg-white p-8 rounded-xl border border-slate-200 card-hover reveal" style="transition-delay: 400ms;">
                         <div class="bg-blue-100 text-blue-600 rounded-lg h-12 w-12 flex items-center justify-center text-2xl mb-4"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-slate-800">Regelmäßiges Feedback</h3>
+                        <h3 class="font-semibold text-slate-800 text-xl mb-2">Regelmäßiges Feedback</h3>
                         <p>Wir (und auf Wunsch auch deine Eltern) besprechen regelmäßig deine Fortschritte und passen unsere Strategie an.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl border border-slate-200 card-hover reveal" style="transition-delay: 500ms;">
                         <div class="bg-blue-100 text-blue-600 rounded-lg h-12 w-12 flex items-center justify-center text-2xl mb-4"><i class="fas fa-face-smile"></i></div>
-                        <h3 class="text-xl font-semibold mb-2 text-slate-800">Mehr als nur Noten</h3>
+                        <h3 class="font-semibold text-slate-800 text-xl mb-2">Mehr als nur Noten</h3>
                         <p>Mein Ziel ist es, dein Selbstvertrauen zu stärken und dir beizubringen, wie du Lernprobleme zukünftig selbst lösen kannst.</p>
                     </div>
                 </div>
@@ -336,41 +380,57 @@
                         <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-2"><i class="fas fa-box-open text-blue-500"></i>Pakete</h3>
                         <p class="mb-6">Ideal für Klausurvorbereitung oder spezifische Themen. Einmal buchen, flexibel nutzen.</p>
                         <div class="space-y-4">
-                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">-15%</div>
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">Einzelstunde</h4>
                                         <p class="text-sm text-slate-500">Für spontane Fragen</p>
                                     </div>
-                                    <div class="text-right"><p class="font-bold text-lg text-slate-800">34,99 €</p></div>
+                                    <div class="text-right">
+                                        <p class="font-bold text-lg text-blue-600">29,74 €</p>
+                                        <del class="text-sm text-slate-400">34,99 €</del>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">-15%</div>
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">5er-Paket</h4>
                                         <p class="text-sm text-slate-500">Für die nächste Klausur</p>
                                     </div>
-                                    <div class="text-right"><p class="font-bold text-lg text-slate-800">31,99 €<span class="font-normal text-sm text-slate-500">/Std.</span></p></div>
+                                    <div class="text-right">
+                                        <p class="font-bold text-lg text-blue-600">27,19 €<span class="font-normal text-sm text-blue-600">/Std.</span></p>
+                                        <del class="text-sm text-slate-400">31,99 €</del>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-lg border-2 border-blue-300 relative card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border-2 border-blue-300 relative card-hover overflow-hidden">
                                 <div class="absolute -top-3 left-4 bg-blue-100 text-blue-700 px-2 py-0.5 text-xs font-bold rounded-full">BELIEBT</div>
+                                <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">-15%</div>
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">10er-Paket</h4>
                                         <p class="text-sm text-slate-500">Fürs ganze Halbjahr</p>
                                     </div>
-                                    <div class="text-right"><p class="font-bold text-lg text-slate-800">29,99 €<span class="font-normal text-sm text-slate-500">/Std.</span></p></div>
+                                    <div class="text-right">
+                                        <p class="font-bold text-lg text-blue-600">25,49 €<span class="font-normal text-sm text-blue-600">/Std.</span></p>
+                                        <del class="text-sm text-slate-400">29,99 €</del>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover">
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 card-hover relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">-15%</div>
                                 <div class="flex justify-between items-center">
                                     <div>
                                         <h4 class="font-semibold text-slate-800">20er-Paket</h4>
                                         <p class="text-sm text-slate-500">Für die Abi-Vorbereitung</p>
                                     </div>
-                                    <div class="text-right"><p class="font-bold text-lg text-slate-800">28,50 €<span class="font-normal text-sm text-slate-500">/Std.</span></p></div>
+                                    <div class="text-right">
+                                        <p class="font-bold text-lg text-blue-600">24,23 €<span class="font-normal text-sm text-blue-600">/Std.</span></p>
+                                        <del class="text-sm text-slate-400">28,50 €</del>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -407,10 +467,14 @@
                                     <button data-duration="6-monat" class="abo-btn duration-btn">6 Mon.</button>
                                 </div>
                             </div>
-                            <div class="bg-slate-50 mt-6 p-6 rounded-lg text-center transition-all duration-300">
+                            <div class="bg-slate-50 mt-6 p-6 rounded-lg text-center transition-all duration-300 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">-15%</div>
                                 <p class="text-slate-500 text-sm">Dein Preis pro Stunde</p>
-                                <p id="per-hour-price" class="text-4xl sm:text-5xl font-extrabold text-blue-600 my-1">32,50 €</p>
-                                <p id="total-price" class="text-slate-700 font-semibold">129,99 € / Monat</p>
+                                <div class="flex items-end justify-center gap-2">
+                                    <p id="per-hour-price" class="text-4xl sm:text-5xl font-extrabold text-blue-600 leading-none">27,63 €</p>
+                                    <del id="per-hour-price-old" class="text-2xl text-slate-400 leading-none mb-1">32,50 €</del>
+                                </div>
+                                <p id="total-price" class="text-slate-700 font-semibold mt-2">110,49 € / Monat</p>
                             </div>
                             <a href="#contact" class="group mt-6 w-full flex items-center justify-center bg-blue-600 text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 active:scale-100 shadow-lg hover:shadow-xl hover:shadow-blue-500/40">
                                 Abo jetzt anfragen
@@ -556,7 +620,8 @@
                                 <!-- FormSubmit Settings -->
                                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Nachhilfe Zone!">
                                 <input type="hidden" name="_captcha" value="false">
-                                
+                                <input type="hidden" name="_next" value="https://IHRE_DOMAIN.de/danke.html"> <!-- Optional: Eigene Danke-Seite -->
+
                                 <div class="mb-4">
                                     <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Dein Name</label>
                                     <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition">
@@ -650,10 +715,44 @@
         // --- Globale Helfer ---
         const select = (el, all = false) => all ? document.querySelectorAll(el) : document.querySelector(el);
         
+        // --- Countdown Timer ---
+        function startCountdown() {
+            const countdownEndDate = new Date("October 14, 2025 22:00:00").getTime();
+
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countdownEndDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    const countdownElement = select('#countdown');
+                    if(countdownElement) {
+                       countdownElement.parentElement.innerHTML = "<p>Die Herbst-Aktion ist leider abgelaufen.</p>";
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                const countdownSection = select('#countdown');
+                if(countdownSection) {
+                    select('#days', false, countdownSection).innerText = String(days).padStart(2, '0');
+                    select('#hours', false, countdownSection).innerText = String(hours).padStart(2, '0');
+                    select('#minutes', false, countdownSection).innerText = String(minutes).padStart(2, '0');
+                    select('#seconds', false, countdownSection).innerText = String(seconds).padStart(2, '0');
+                }
+
+            }, 1000);
+        }
+        startCountdown();
+        
         // --- Header-Schatten beim Scrollen ---
         const header = select('#main-header');
         window.addEventListener('scroll', () => {
-            header.classList.toggle('shadow-md', window.scrollY > 10);
+            header.classList.toggle('shadow-sm', window.scrollY > 10);
         });
 
         // --- Scroll-Animationen ---
@@ -750,18 +849,36 @@
 
         // --- Interaktiver Abo-Rechner ---
         const aboData = {
-            light: { flex: { p: "32,50 €", t: "129,99 € / Monat" }, "3-monat": { p: "29,99 €", t: "359,99 €" }, "6-monat": { p: "27,90 €", t: "669,99 €" } },
-            standard: { flex: { p: "30,00 €", t: "239,99 € / Monat" }, "3-monat": { p: "27,50 €", t: "659,99 €" }, "6-monat": { p: "25,60 €", t: "1.229,99 €" } },
-            intensiv: { flex: { p: "27,50 €", t: "329,99 € / Monat" }, "3-monat": { p: "25,00 €", t: "899,99 €" }, "6-monat": { p: "23,30 €", t: "1.679,99 €" } }
+            light: { 
+                flex: { pNew: "27,63 €", pOld: "32,50 €", t: "110,49 € / Monat" }, 
+                "3-monat": { pNew: "25,49 €", pOld: "29,99 €", t: "305,99 €" }, 
+                "6-monat": { pNew: "23,72 €", pOld: "27,90 €", t: "569,49 €" } 
+            },
+            standard: { 
+                flex: { pNew: "25,50 €", pOld: "30,00 €", t: "203,99 € / Monat" }, 
+                "3-monat": { pNew: "23,38 €", pOld: "27,50 €", t: "560,99 €" }, 
+                "6-monat": { pNew: "21,76 €", pOld: "25,60 €", t: "1045,49 €" } 
+            },
+            intensiv: { 
+                flex: { pNew: "23,38 €", pOld: "27,50 €", t: "280,49 € / Monat" }, 
+                "3-monat": { pNew: "21,25 €", pOld: "25,00 €", t: "764,99 €" }, 
+                "6-monat": { pNew: "19,81 €", pOld: "23,30 €", t: "1427,99 €" } 
+            }
         };
-        const perHourEl = select('#per-hour-price'), totalEl = select('#total-price');
-        let intensity = 'light', duration = 'flex';
+
+        const perHourEl = select('#per-hour-price');
+        const perHourOldEl = select('#per-hour-price-old');
+        const totalEl = select('#total-price');
+        let intensity = 'light';
+        let duration = 'flex';
 
         const updatePrice = () => {
             const data = aboData[intensity][duration];
-            perHourEl.textContent = data.p;
+            perHourEl.textContent = data.pNew;
+            perHourOldEl.textContent = data.pOld;
             totalEl.textContent = data.t;
         };
+        updatePrice(); // Initial call to set prices
 
         select('#intensity-selector').addEventListener('click', (e) => {
             const button = e.target.closest('button');
@@ -790,6 +907,10 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         counters.forEach(counter => {
+                            // Prevent re-animation
+                            if(counter.classList.contains('animated')) return;
+                            counter.classList.add('animated');
+
                             const target = +counter.dataset.target;
                             const duration = 2000;
                             const suffix = counter.dataset.suffix || '';
@@ -804,7 +925,7 @@
                                     clearInterval(timer);
                                     counter.innerText = target + suffix;
                                 } else {
-                                    counter.innerText = Math.ceil(current);
+                                    counter.innerText = Math.ceil(current) + (suffix && target > 100 ? suffix : '');
                                 }
                             }, stepTime);
                         });
@@ -870,3 +991,4 @@
     </script>
 </body>
 </html>
+
