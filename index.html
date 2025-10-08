@@ -943,10 +943,54 @@
             .abo-btn:hover { background-color: #f1f5f9; border-color: #cbd5e1; }
             .abo-btn.active-btn { background-color: var(--brand-blue); color: #ffffff; border-color: var(--brand-blue); box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }`;
         document.head.appendChild(style);
+
+        // --- FormSubmit AJAX Submission ---
+        const contactForm = select('#contact-form');
+        const formContainer = select('#form-container');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.innerHTML = "Sende...";
+                submitButton.disabled = true;
+
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        contactForm.style.display = 'none';
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'text-center py-10';
+                        successMessage.innerHTML = `
+                            <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold text-slate-800">Vielen Dank!</h3>
+                            <p class="text-slate-600">Deine Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei dir.</p>
+                        `;
+                        formContainer.appendChild(successMessage);
+                    } else {
+                        console.error('Form submission error:', data);
+                        submitButton.innerHTML = "Fehler - erneut versuchen";
+                        submitButton.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Network error:', error);
+                    submitButton.innerHTML = "Fehler - erneut versuchen";
+                    submitButton.disabled = false;
+                });
+            });
         }
     });
     </script>
 </body>
 </html>
+
 
 
